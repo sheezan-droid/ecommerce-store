@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# 🛍️ ShopVibe — E-Commerce Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, fully responsive e-commerce product store built with **React.js** featuring product browsing, shopping cart, filters, and a stunning dark/light mode UI.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)
+![CSS3](https://img.shields.io/badge/CSS3-Modern_UI-1572B6?style=for-the-badge&logo=css3)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🛒 **Shopping Cart** — Add, remove, update quantities with real-time total
+- 🔍 **Product Search** — Search products by name, category, or description
+- 📂 **Category Filters** — Filter by Electronics, Fashion, Sports, Home, Food
+- 📊 **Sort Products** — Sort by price, rating, name, or featured
+- 🌙 **Dark/Light Mode** — Theme toggle with localStorage persistence
+- 🎯 **Product Detail Modal** — Click any product for full details with savings info
+- 🔔 **Toast Notifications** — Visual feedback when adding items to cart
+- 💾 **Cart Persistence** — Cart saved in localStorage across sessions
+- 📱 **Fully Responsive** — Mobile, tablet, and desktop optimized
+- 🎨 **Modern UI** — Smooth animations, hover effects, gradient accents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Technology | Purpose |
+|------------|---------|
+| React.js | Frontend framework |
+| Context API + useReducer | State management (Cart) |
+| CSS3 (Custom Properties) | Theming & responsive design |
+| localStorage | Data persistence |
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sheezan-droid/ecommerce-store.git
+   cd ecommerce-store
+   ```
 
-### `npm run build`
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **No API key required!** Product data is included in the app.
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+ecommerce-store/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Header.js          # Navbar with search, theme toggle, cart
+│   │   ├── Hero.js            # Hero/banner section
+│   │   ├── Filters.js         # Category buttons & sort dropdown
+│   │   ├── ProductCard.js     # Product card with hover effects
+│   │   ├── ProductModal.js    # Product detail popup
+│   │   ├── Cart.js            # Cart drawer/sidebar
+│   │   └── Toast.js           # Toast notifications
+│   ├── context/
+│   │   └── CartContext.js     # Cart state management (Context + Reducer)
+│   ├── data/
+│   │   └── products.js        # Product catalog data
+│   ├── App.js                 # Main app component
+│   ├── App.css                # Component styles
+│   └── index.css              # Global styles & animations
+└── README.md
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎨 Key React Concepts Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Context API** for global cart state management
+- **useReducer** for complex state logic
+- **useMemo** for optimized filtering & sorting
+- **useCallback** for memoized functions
+- **useEffect** for side effects (localStorage, theme)
+- **Conditional rendering** for modals, empty states
+- **Component composition** with props
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📸 Features Showcase
 
-## Learn More
+| Feature | Description |
+|---------|-------------|
+| Product Grid | Responsive grid with hover effects & quick add |
+| Shopping Cart | Slide-in drawer with quantity controls |
+| Dark/Light Mode | Seamless theme switching |
+| Product Modal | Detailed view with pricing & description |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-### Code Splitting
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is open source and available under the [MIT License](LICENSE).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ **If you found this project helpful, give it a star!**

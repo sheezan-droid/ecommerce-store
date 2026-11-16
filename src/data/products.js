@@ -1,0 +1,162 @@
+const products = [
+  {
+    id: 1,
+    name: "Wireless Bluetooth Headphones",
+    price: 79.99,
+    originalPrice: 129.99,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    rating: 4.5,
+    reviews: 234,
+    description: "Premium wireless headphones with active noise cancellation, 30-hour battery life, and crystal-clear sound quality. Perfect for music lovers and professionals.",
+    badge: "Best Seller",
+    inStock: true
+  },
+  {
+    id: 2,
+    name: "Smart Watch Pro",
+    price: 199.99,
+    originalPrice: 299.99,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    rating: 4.7,
+    reviews: 189,
+    description: "Advanced smartwatch with health monitoring, GPS tracking, water resistance up to 50m, and a stunning AMOLED display.",
+    badge: "New",
+    inStock: true
+  },
+  {
+    id: 3,
+    name: "Leather Crossbody Bag",
+    price: 49.99,
+    originalPrice: 89.99,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop",
+    rating: 4.3,
+    reviews: 156,
+    description: "Elegant genuine leather crossbody bag with multiple compartments, adjustable strap, and timeless design for everyday use.",
+    badge: "Sale",
+    inStock: true
+  },
+  {
+    id: 4,
+    name: "Running Shoes Ultra",
+    price: 119.99,
+    originalPrice: 159.99,
+    category: "Sports",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    rating: 4.6,
+    reviews: 312,
+    description: "Lightweight running shoes with responsive cushioning, breathable mesh upper, and superior grip for all terrains.",
+    badge: "Popular",
+    inStock: true
+  },
+  {
+    id: 5,
+    name: "Minimalist Desk Lamp",
+    price: 34.99,
+    originalPrice: 54.99,
+    category: "Home",
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=400&h=400&fit=crop",
+    rating: 4.2,
+    reviews: 98,
+    description: "Modern LED desk lamp with touch control, adjustable brightness, USB charging port, and sleek minimalist design.",
+    badge: null,
+    inStock: true
+  },
+  {
+    id: 6,
+    name: "Organic Green Tea Set",
+    price: 24.99,
+    originalPrice: 39.99,
+    category: "Food",
+    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=400&fit=crop",
+    rating: 4.8,
+    reviews: 445,
+    description: "Premium organic green tea collection with 5 unique flavors. Hand-picked from Japanese gardens, rich in antioxidants.",
+    badge: "Top Rated",
+    inStock: true
+  },
+  {
+    id: 7,
+    name: "Vintage Sunglasses",
+    price: 29.99,
+    originalPrice: 49.99,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+    rating: 4.1,
+    reviews: 87,
+    description: "Retro-inspired sunglasses with UV400 protection, polarized lenses, and a lightweight acetate frame.",
+    badge: "Sale",
+    inStock: true
+  },
+  {
+    id: 8,
+    name: "Portable Bluetooth Speaker",
+    price: 44.99,
+    originalPrice: 69.99,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    rating: 4.4,
+    reviews: 201,
+    description: "Waterproof portable speaker with 360° sound, 20-hour playtime, built-in microphone, and rugged design for outdoor adventures.",
+    badge: null,
+    inStock: true
+  },
+  {
+    id: 9,
+    name: "Yoga Mat Premium",
+    price: 39.99,
+    originalPrice: 59.99,
+    category: "Sports",
+    image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop",
+    rating: 4.5,
+    reviews: 178,
+    description: "Extra thick eco-friendly yoga mat with non-slip surface, alignment markings, and carrying strap included.",
+    badge: null,
+    inStock: true
+  },
+  {
+    id: 10,
+    name: "Ceramic Coffee Mug Set",
+    price: 19.99,
+    originalPrice: 34.99,
+    category: "Home",
+    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop",
+    rating: 4.6,
+    reviews: 267,
+    description: "Set of 4 handcrafted ceramic mugs with unique glazed finishes. Microwave and dishwasher safe, 12oz capacity each.",
+    badge: "Best Seller",
+    inStock: true
+  },
+  {
+    id: 11,
+    name: "Mechanical Keyboard RGB",
+    price: 89.99,
+    originalPrice: 139.99,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=400&h=400&fit=crop",
+    rating: 4.7,
+    reviews: 156,
+    description: "Compact mechanical keyboard with Cherry MX switches, per-key RGB lighting, aluminum frame, and USB-C connectivity.",
+    badge: "New",
+    inStock: true
+  },
+  {
+    id: 12,
+    name: "Canvas Backpack",
+    price: 54.99,
+    originalPrice: 79.99,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+    rating: 4.3,
+    reviews: 134,
+    description: "Durable canvas backpack with padded laptop compartment, water-resistant coating, and multiple organization pockets.",
+    badge: null,
+    inStock: true
+  }
+];
+
+export const categories = ["All", "Electronics", "Fashion", "Sports", "Home", "Food"];
+
+export default products;
